@@ -20,8 +20,8 @@ public class BandController {
     private final BandService bandService;
 
     @GetMapping(value = "/full")
-    public ResponseEntity<List<BandDTO>> findAll(@RequestParam(required = false) Boolean alphabeticalOrder,
-                                                 @RequestParam(required = false) Boolean popularity,
+    public ResponseEntity<List<BandDTO>> findAll(@RequestParam(required = false, defaultValue = "false") Boolean alphabeticalOrder,
+                                                 @RequestParam(required = false, defaultValue = "false") Boolean popularity,
                                                  @RequestParam(required = false) String bandName) {
         return ResponseEntity.ok().body(bandService.findAll(alphabeticalOrder, popularity, bandName));
     }

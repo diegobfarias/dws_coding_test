@@ -19,5 +19,5 @@ public class Band implements Serializable {
     private String biography;
     private Long numPlays;
     private List<String> albums;
-    private List<Album> albumList;
+    private List<Album[]> albumList;
 }

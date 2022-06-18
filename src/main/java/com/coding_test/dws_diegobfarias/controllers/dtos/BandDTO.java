@@ -18,5 +18,6 @@ public class BandDTO {
     private String genre;
     private String biography;
     private Long numPlays;
-    private List<Album> albumList;
+    private List<String> albums;
+    private List<Album[]> albumList;
 }
