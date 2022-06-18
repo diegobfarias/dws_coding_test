@@ -20,5 +20,6 @@ public class Band implements Serializable {
     private String genre;
     private String biography;
     private Long numPlays;
+    private List<String> albums;
     private List<Album> albumList;
 }

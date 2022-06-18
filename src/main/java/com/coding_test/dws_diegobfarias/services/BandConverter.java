@@ -16,7 +16,7 @@ public class BandConverter {
 
     public static BandDTO toDTO(Band band) {
         return BandDTO.builder()
-                .albumList(band.getAlbumList())
+                //.albumList(band.getAlbumList())
                 .biography(band.getBiography())
                 .genre(band.getGenre())
                 .image(band.getImage())

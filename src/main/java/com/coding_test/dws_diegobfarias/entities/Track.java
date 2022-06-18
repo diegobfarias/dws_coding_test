@@ -12,7 +12,6 @@ import java.io.Serializable;
 public class Track implements Serializable {
 
     private String id;
-
     private String name;
     private Integer duration;
 }

@@ -11,12 +11,7 @@ import java.util.List;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Album implements Serializable {
+public class AlbumList implements Serializable {
 
-    private String name;
-    private String image;
-    private LocalDateTime releasedDate;
-    private String band;
-    private List<Track> tracks;
-    private String id;
+    private List<Album> albumList;
 }
