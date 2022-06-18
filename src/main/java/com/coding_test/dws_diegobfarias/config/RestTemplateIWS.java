@@ -2,6 +2,8 @@ package com.coding_test.dws_diegobfarias.config;
 
 import com.coding_test.dws_diegobfarias.entities.Band;
 import lombok.RequiredArgsConstructor;
+import org.springframework.cache.annotation.Cacheable;
+import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.*;
 import org.springframework.stereotype.Component;
@@ -11,8 +13,9 @@ import java.util.*;
 
 @Component
 @RequiredArgsConstructor
+@EnableCaching
 public class RestTemplateIWS {
-
+    @Cacheable(value = "dataIWS")
     public List<Band> getIwsData() {
         RestTemplate restTemplate = new RestTemplate();
         String fooResourceUrl = "https://iws-brazil-labs-iws-recruiting-bands-staging.iwsbrazil.io/api/full";
