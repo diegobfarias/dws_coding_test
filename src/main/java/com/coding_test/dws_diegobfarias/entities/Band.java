@@ -1,7 +1,6 @@
 package com.coding_test.dws_diegobfarias.entities;
 
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -11,7 +10,6 @@ import java.util.List;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
 public class Band implements Serializable {
 
     private String id;
